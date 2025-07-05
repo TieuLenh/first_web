@@ -1,1 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* html{} */
+:root{
+    --heightOfHeader: 48;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+li{
+    list-style: none;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ccc;
+    aspect-ratio: 35/20;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: calc(var(--heightOfHeader) * 1px);
+    background-color: black;
+    font-family: cursive;
+}
+header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    background-color: aqua;
+}
+
+#home{
+    /* position */
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* display */
+    display: inline-grid;
+    justify-items: center; /*căn chỉnh theo chiều ngang */
+    /* size */
+    height: 100%;
+    width: 64px;
+    line-height: 100%;
+    background-color: red;
+}
+#home a{
+    line-height: calc(var(--heightOfHeader) * 1px);
+}
+#nav1{
+    position: absolute;
+    left: 50%;
+    font-family: cursive;
+    display: inline-block;
+    transform: translate(-50%, 0);
+    height: 100%;
+}
+#nav1 li{
+    display: inline-block;
+    margin: 0 20px;
+}
+#nav1 li a{
+    line-height: 32px;
+}
+#nav1 .more{
+    display: none;
+}
+#profile{
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+
+}
+#profile img{
+    height: 100%;
+    width: auto;
+}
+.background_img{
+    position: absolute;
+    top: calc(var(--heightOfHeader) * 1px);
+    height: 100%;
+    width: auto;
+    animation: run 1s infinite;
+}
+
+@keyframes run{
+    to{
+        right: 100%;
+    }
+}
+
+
+
+/* main */
+main{
+    margin-top: 200px;
+    background-color: #ccc;
+}
+
+.wordType{
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+    margin-top: 40px;
+    padding-left: 16px;
+}
+
+.font-sample {
+    margin: 8px 0;
+    font-size: small;
+    padding-left: 28px;
+}
+
+.label {
+    display: inline-block;
+    width: 160px;
+    font-weight: bold;
+}
 
